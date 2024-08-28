@@ -22,8 +22,6 @@ import DescriptionC from "./DescriptionC";
 import ImageContainerD from "./ImageContainerD";
 import DescriptionD from "./DescriptionD";
 
-import { Fade } from "react-reveal";
-
 function OurServices() {
   return (
     <section
@@ -41,27 +39,26 @@ function OurServices() {
         <ServicesD />
         <ServicesE />
       </article>
-      <Fade top distance="20%" duration={1500}>
-        <article className="flex flex-col sm:flex-row sm:items-center sm:justify-around mt-40 lg:mt-30 xl:mt-60 lg:mx-20 xl:mx-32 2xl:mx-44">
-          <ImageContainerA />
-          <DescriptionA />
-        </article>
 
-        <article className="flex flex-col-reverse mt-40 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mx-20 xl:mx-32 2xl:mx-44">
-          <DescriptionB />
-          <ImageContainerB />
-        </article>
+      <article className="flex flex-col sm:flex-row sm:items-center sm:justify-around mt-40 lg:mt-30 xl:mt-60 lg:mx-20 xl:mx-32 2xl:mx-44">
+        <ImageContainerA />
+        <DescriptionA />
+      </article>
 
-        <article className="flex flex-col mt-40 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mx-20 xl:mx-32 2xl:mx-44">
-          <ImageContainerC />
-          <DescriptionC />
-        </article>
+      <article className="flex flex-col-reverse mt-40 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mx-20 xl:mx-32 2xl:mx-44">
+        <DescriptionB />
+        <ImageContainerB />
+      </article>
 
-        <article className="flex flex-col-reverse mt-40 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mb-[6rem] lg:mx-20 xl:mx-32 2xl:mx-44">
-          <DescriptionD />
-          <ImageContainerD />
-        </article>
-      </Fade>
+      <article className="flex flex-col mt-40 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mx-20 xl:mx-32 2xl:mx-44">
+        <ImageContainerC />
+        <DescriptionC />
+      </article>
+
+      <article className="flex flex-col-reverse mt-40 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mb-[6rem] lg:mx-20 xl:mx-32 2xl:mx-44">
+        <DescriptionD />
+        <ImageContainerD />
+      </article>
       {/* <ServicesInformation>
         <h1>Details</h1>
         <ImageContainer />
