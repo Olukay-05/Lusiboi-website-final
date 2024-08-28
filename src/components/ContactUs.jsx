@@ -59,7 +59,7 @@ function ContactUs() {
     <>
       <Fade top distance="20%" duration={1500}>
         <section id="contact" className="bg-yellow-50  text-slate-800 ">
-          <div className="flex  flex-col items-center justify-center py-14  lg:pb-[4.1rem]">
+          <div className="flex  flex-col items-center justify-center py-14  lg:pb-[4rem]">
             <h2 className="text-lg md:text-2xl font-bold lg:text-3xl xl:text-4xl">
               Get in Touch
             </h2>
