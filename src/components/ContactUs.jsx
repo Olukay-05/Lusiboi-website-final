@@ -55,7 +55,10 @@ function ContactUs() {
 
   return (
     <>
-      <section id="contact" className="bg-yellow-50  text-slate-800 ">
+      <section
+        id="contact"
+        className="mt-20 pt-10 bg-yellow-50  text-slate-800 "
+      >
         <div className="flex  flex-col items-center justify-center py-14  lg:pb-[4rem]">
           <h2 className="text-lg md:text-2xl font-bold lg:text-3xl xl:text-4xl">
             Get in Touch

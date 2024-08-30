@@ -26,13 +26,13 @@ function OurServices() {
   return (
     <section
       id="services"
-      className="mt-20 lg:mt-10 transition-opacity duration-1000 opacity-0 lg:pt-[5rem] "
+      className="pt-5 lg:mt-10 transition-opacity duration-1000 opacity-0 lg:pt-[5rem] "
     >
       <h2 className="text-center mt-[10rem] text-2xl font-bold lg:text-3xl xl:text-4xl">
         Our Services
       </h2>
 
-      <article className="grid content-center justify-items-center grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 sm:mx-12 md:mx-20 lg:mx-40 xl:mx-0 2xl:mx-40">
+      <article className="grid content-center justify-items-center grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 sm:mx-12 md:mx-20 lg:mx-40 xl:mx-20 2xl:mx-40">
         <ServicesA />
         <ServicesB />
         <ServicesC />
@@ -40,22 +40,34 @@ function OurServices() {
         <ServicesE />
       </article>
 
-      <article className="flex flex-col sm:flex-row sm:items-center sm:justify-around mt-40 lg:mt-30 xl:mt-60 lg:mx-20 xl:mx-32 2xl:mx-44">
+      <article
+        id="movie-production"
+        className="flex flex-col sm:flex-row sm:items-center sm:justify-around mt-40 lg:mt-30 xl:mt-60 lg:mx-20 xl:mx-32 2xl:mx-44"
+      >
         <ImageContainerA />
         <DescriptionA />
       </article>
 
-      <article className="flex flex-col-reverse mt-40 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mx-20 xl:mx-32 2xl:mx-44">
+      <article
+        id="music-production"
+        className="flex flex-col-reverse mt-20 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mx-20 xl:mx-32 2xl:mx-44"
+      >
         <DescriptionB />
         <ImageContainerB />
       </article>
 
-      <article className="flex flex-col mt-40 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mx-20 xl:mx-32 2xl:mx-44">
+      <article
+        id="artist-management"
+        className="flex flex-col mt-20 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mx-20 xl:mx-32 2xl:mx-44"
+      >
         <ImageContainerC />
         <DescriptionC />
       </article>
 
-      <article className="flex flex-col-reverse mt-40 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mb-[6rem] lg:mx-20 xl:mx-32 2xl:mx-44">
+      <article
+        id="event-management"
+        className="flex flex-col-reverse mt-20 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mb-[6rem] lg:mx-20 xl:mx-32 2xl:mx-44"
+      >
         <DescriptionD />
         <ImageContainerD />
       </article>

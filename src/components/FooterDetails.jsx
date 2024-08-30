@@ -17,13 +17,13 @@ function FooterDetails() {
           </div>
           <div className="flex items-center justify-center gap-4 sm:gap-10">
             <p className="transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
-              <a href="home">Home</a>
+              <a href="#home">Home</a>
             </p>
             <p className="transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
-              <a href="about">About</a>
+              <a href="#about">About</a>
             </p>
-            <p className="transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
-              <a href="services">Our Services</a>
+            <p className="text-nowrap transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
+              <a href="#services">Our Services</a>
             </p>
           </div>
           {/* <div className="flex items-center justify-center gap-3 sm:gap-5">
@@ -41,7 +41,7 @@ function FooterDetails() {
             </div>
           </div> */}
         </div>
-        <div className="hidden lg:block sm:pb-10 w-[14rem]">
+        <div className="hidden lg:block sm:pb-10 w-[14rem] text-nowrap">
           <Button type="primary_gold">
             <a href="#contact">Contact Us</a>
           </Button>
