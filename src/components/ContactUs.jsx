@@ -6,8 +6,13 @@ import { Button, useToast } from "@chakra-ui/react"; // Chakra UI toast for noti
 
 import billboard from "../assets/billboard.svg";
 // import ParticlesComponent from "./ParticlesComponent";
+import useIntersectionObserver from "../Hooks/useIntersectionObserver";
 
 function ContactUs() {
+  const [ref, isIntersecting] = useIntersectionObserver({
+    threshold: 0,
+    rootMargin: "0px 0px -250px 0px",
+  });
   const {
     register,
     handleSubmit,
@@ -56,25 +61,28 @@ function ContactUs() {
   return (
     <>
       <section
+        ref={ref}
         id="contact"
-        className="mt-20 pt-10 bg-yellow-50  text-slate-800 "
+        className={`fade-in mt-20 pt-10 bg-[#1c1917] border-b-2  text-slate-800  ${
+          isIntersecting ? "appear" : ""
+        }`}
       >
         <div className="flex  flex-col items-center justify-center py-14  lg:pb-[4rem]">
-          <h2 className="text-lg md:text-2xl font-bold lg:text-3xl xl:text-4xl">
+          <h2 className="rainbow text-lg md:text-2xl font-bold lg:text-3xl xl:text-4xl">
             Get in Touch
           </h2>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg">
+          <p className="rainbow text-xs sm:text-sm md:text-base lg:text-lg">
             Any question or remarks? Just write us a message
           </p>
         </div>
         <div className="flex items-center justify-center  pb-[15rem]">
-          <div className="w-[24rem] hidden xl:block bg-amber-100 ">
+          <div className="w-[24rem] hidden xl:block ">
             <img src={billboard} alt="image" className="w-full" />
           </div>
-
+          {/* bg-amber-100 */}
           <form
             onSubmit={handleSubmit(sendEmail)}
-            className="block bg-amber-100 sm:grid rounded-lg grid-cols-2 items-center gap-4 p-4 py-12 md:p-8 md:px-4 lg:px-[4rem] lg:py-[3rem]"
+            className="block  bg-stone-200 sm:grid rounded-lg grid-cols-2 items-center gap-4 p-4 py-12 md:p-8 md:px-4 lg:px-[4rem] lg:py-[3rem]"
           >
             {/* First Name */}
             <div className="flex flex-col w-72 sm:w-80 md:w-[23rem] lg:w-80 pb-4 sm:pb-0">

@@ -56,9 +56,10 @@ function Hero() {
 
   return (
     <>
+      {/* bg-yellow-50 */}
       <section
         id="home"
-        className="relative bg-yellow-50 text-center sm:relative text-stone-800 pt-40 sm:pt-20 pb-20  md:pt-40 md:pb-12 sm:flex sm:items-center sm:justify-around xl:px-0 2xl:px-20 lg:pt-28 lg:pb-[15rem]"
+        className="relative bg-[#1c1917] text-center sm:relative text-stone-200 pt-40 sm:pt-20 pb-20  md:pt-40 md:pb-12 sm:flex sm:items-center sm:justify-around xl:px-0 2xl:px-20 lg:pt-28 lg:pb-[15rem]"
       >
         <div className="flex items-start justify-between  p-4 flex-col lg:text-center gap-6 lg:gap-10 pb-8 md:px-20 md:text-center xl:gap-12   ">
           <h1
@@ -90,7 +91,7 @@ function Hero() {
             className="opacity-0 transform translate-y-[100px] mx-auto xl:mx-0 md:block"
           >
             <a href="#contact">
-              <Button type="primary_black">Let&apos;s Get Started</Button>
+              <Button type="primary_gold">Let&apos;s Get Started</Button>
             </a>
           </div>
         </div>

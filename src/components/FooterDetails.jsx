@@ -4,12 +4,22 @@ import Button from "../reusable-component/Button";
 // import tiktok from "../assets/tiktok.svg";
 // import twitterX from "../assets/twitterX.svg";
 import footerLogo from "../assets/footerLogo.svg";
+import useIntersectionObserver from "../Hooks/useIntersectionObserver";
 
 const currentYear = new Date().getFullYear();
 
 function FooterDetails() {
+  const [ref, isIntersecting] = useIntersectionObserver({
+    threshold: 0,
+    rootMargin: "0px 0px -250px 0px",
+  });
   return (
-    <div className="bg-stone-900 text-stone-200 pb-16 lg:pb-24">
+    <div
+      ref={ref}
+      className={`fade-in bg-stone-900 text-stone-200 pb-16 lg:pb-24 ${
+        isIntersecting ? "appear" : ""
+      }`}
+    >
       <div className="border-b h-40 sm:h-64 mx-[2rem] lg:mx-[2.2rem] xl:mx-[12.5rem] flex items-end justify-between text-xs sm:text-sm md:text-base lg:text-lg">
         <div className="w-[14rem] h-[8rem] mx-auto lg:w-[50rem] xl:w-[84rem] sm:h-[14rem] grid grid-cols-1 text-center justify-center">
           <div className="flex items-center justify-self-center w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem] ">

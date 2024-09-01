@@ -75,7 +75,7 @@ function Nav() {
   }, [nav]);
 
   return (
-    <nav className="fixed top-0 w-full z-50 flex shadow-lg items-center justify-between py-4  mx-auto bg-slate-50 px-4 sm:px-10 lg:px-[10rem]">
+    <nav className="fixed top-0 w-full z-50 flex shadow-lg items-center justify-between py-4  mx-auto bg-stone-200 px-4 sm:px-10 lg:px-[10rem]">
       <div>
         <a href="#home">
           <img src={navLogo} alt="logo" className="w-15 md:w-32 lg:38" />
