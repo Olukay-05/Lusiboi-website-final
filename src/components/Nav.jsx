@@ -114,7 +114,7 @@ function Nav() {
         ref={navRef}
         className={
           nav
-            ? "fixed z-10 left-0 top-0 w-[60%] border-r border-r-gray-900 h-full bg-stone-900 text-stone-200 ease-in-out duration-300"
+            ? "fixed z-10 left-0 top-0 w-[60%] border-r border-r-stone-500 h-full bg-stone-900 text-stone-200 ease-in-out duration-300"
             : "fixed left-[-100%]"
         }
       >
