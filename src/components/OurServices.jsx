@@ -3,6 +3,10 @@
 // import { default as Services } from "./Services";
 // import { default as ServicesInformation } from "./ServicesInformation";
 
+import { gsap } from "gsap";
+import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import ServicesA from "./ServicesA";
 import ServicesB from "./ServicesB";
 import ServicesC from "./ServicesC";
@@ -23,21 +27,79 @@ import ImageContainerD from "./ImageContainerD";
 import DescriptionD from "./DescriptionD";
 
 function OurServices() {
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  const headingRef = useRef(null);
+  const servicesRef = useRef([]);
+
+  useEffect(() => {
+    // Create a GSAP context to handle cleanup more easily
+    const ctx = gsap.context(() => {
+      // Timeline for heading animation
+      gsap.from(headingRef.current, {
+        scrollTrigger: {
+          trigger: headingRef.current,
+          start: "top 80%", // Start when heading is 80% in view
+          toggleActions: "play none none reverse",
+        },
+        y: 50,
+        opacity: 0,
+        ease: "back(4)",
+        duration: 1,
+      });
+
+      // Timeline for services stagger animation
+      gsap.from(servicesRef.current, {
+        scrollTrigger: {
+          trigger: servicesRef.current[0], // Use the first service as the trigger
+          start: "top 60%", // Start when the first service is 80% in view
+          toggleActions: "play none none reverse",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        // ease: "power3.out",
+        ease: "back(4)",
+        stagger: 0.2, // Stagger each service by 0.2 seconds
+      });
+    });
+
+    // Cleanup GSAP context on unmount
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section
-      id="services"
-      className="pt-5 lg:mt-10 transition-opacity duration-1000 opacity-0 lg:pt-[5rem] "
-    >
-      <h2 className="text-center mt-[10rem] text-2xl font-bold lg:text-3xl xl:text-4xl">
+    // transition-opacity duration-1000 opacity-0
+    <section id="services" className="pt-5 lg:mt-10  lg:pt-[5rem] ">
+      <h2
+        ref={headingRef}
+        className="text-center text-[#f9fada] mt-[8rem] text-2xl font-bold lg:text-3xl xl:text-4xl"
+      >
         Our Services
       </h2>
 
       <article className="grid content-center justify-items-center grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 sm:mx-12 md:mx-20 lg:mx-40 xl:mx-20 2xl:mx-40">
-        <ServicesA />
-        <ServicesB />
-        <ServicesC />
-        <ServicesD />
-        <ServicesE />
+        <div ref={(el) => (servicesRef.current[0] = el)}>
+          <ServicesA />
+        </div>
+
+        <div ref={(el) => (servicesRef.current[1] = el)}>
+          <ServicesB />
+        </div>
+        <div ref={(el) => (servicesRef.current[2] = el)}>
+          <ServicesC />
+        </div>
+        <div ref={(el) => (servicesRef.current[3] = el)}>
+          <ServicesD />
+        </div>
+        <div
+          ref={(el) => (servicesRef.current[4] = el)}
+          className="col-span-2 xl:col-span-1"
+        >
+          <ServicesE />
+        </div>
+        {/* <ServicesE /> */}
       </article>
 
       <article
@@ -66,8 +128,9 @@ function OurServices() {
 
       <article
         id="event-management"
-        className="flex flex-col-reverse mt-20 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mb-[6rem] lg:mx-20 xl:mx-32 2xl:mx-44"
+        className="flex flex-col-reverse mt-20 md:mt-0 sm:flex-row sm:items-center sm:justify-around lg:mt-20 lg:mb-[6rem]  xl:mx-32 2xl:mx-44"
       >
+        {/* lg:mx-20 xl:mx-32 2xl:mx-44 */}
         <DescriptionD />
         <ImageContainerD />
       </article>

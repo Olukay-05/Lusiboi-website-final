@@ -1,18 +1,20 @@
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 // import Button from "../reusable-component/Button";
 import { Button, useToast } from "@chakra-ui/react"; // Chakra UI toast for notifications
 
 import billboard from "../assets/billboard.svg";
 // import ParticlesComponent from "./ParticlesComponent";
 import useIntersectionObserver from "../Hooks/useIntersectionObserver";
+// import useArrowKeyNavigation from "../Hooks/useArrowKeyNavigation";
 
 function ContactUs() {
   const [ref, isIntersecting] = useIntersectionObserver({
     threshold: 0,
     rootMargin: "0px 0px -250px 0px",
   });
+
   const {
     register,
     handleSubmit,
@@ -21,6 +23,8 @@ function ContactUs() {
   } = useForm({
     mode: "onChange",
   });
+
+  // const inputRefs = useArrowKeyNavigation();
   const [isSuccess, setIsSuccess] = useState(false);
   const toast = useToast();
 
@@ -61,47 +65,57 @@ function ContactUs() {
   return (
     <>
       <section
-        ref={ref}
         id="contact"
-        className={`fade-in mt-20 pt-10 bg-[#1c1917] border-b-2  text-slate-800  ${
-          isIntersecting ? "appear" : ""
-        }`}
+        // bg-[#1c1917]
+        // className={` relative z-0 fade-in mt-20 pt-10  bg-yellow-50 border-b-2  text-slate-800  ${
+        //   isIntersecting ? "appear" : ""
+        // }`}
+        className="relative z-0 mt-20 pt-10  bg-yellow-50 border-b-2  text-slate-800 "
       >
-        <div className="flex  flex-col items-center justify-center py-14  lg:pb-[4rem]">
-          <h2 className="rainbow text-lg md:text-2xl font-bold lg:text-3xl xl:text-4xl">
+        <div className="flex text-[#a86a33] flex-col items-center justify-center py-14  lg:pb-[4rem]">
+          <h2 className=" text-lg md:text-2xl font-bold lg:text-3xl xl:text-4xl">
             Get in Touch
           </h2>
-          <p className="rainbow text-xs sm:text-sm md:text-base lg:text-lg">
+          <p className=" text-xs sm:text-sm md:text-base text-[#9d6c40] lg:text-lg">
             Any question or remarks? Just write us a message
           </p>
         </div>
-        <div className="flex items-center justify-center  pb-[15rem]">
-          <div className="w-[24rem] hidden xl:block ">
+        <div className="flex items-center justify-center pb-[15rem]">
+          {/* w-[25.2rem] hidden xl:block shadow-xl */}
+
+          <div
+            className={`hidden xl:block shadow-xl ${
+              Object.keys(errors).length > 0 ? "w-[28.2rem]" : "w-[25.2rem]"
+            }`}
+          >
             <img src={billboard} alt="image" className="w-full" />
           </div>
           {/* bg-amber-100 */}
           <form
             onSubmit={handleSubmit(sendEmail)}
-            className="block  bg-stone-200 sm:grid rounded-lg grid-cols-2 items-center gap-4 p-4 py-12 md:p-8 md:px-4 lg:px-[4rem] lg:py-[3rem]"
+            // bg-stone-200
+            // bg-[#faeeae]
+            className="block shadow-xl border border-t-2 border-yellow-100 bg-yellow-50 sm:grid rounded-lg grid-cols-2 items-center gap-4 p-4 py-12 md:p-8 md:px-4 lg:px-[4rem] lg:py-[3rem]"
           >
             {/* First Name */}
             <div className="flex flex-col w-72 sm:w-80 md:w-[23rem] lg:w-80 pb-4 sm:pb-0">
               <label
                 htmlFor="firstName"
-                className="block text-xs sm:text-sm md:text-base lg:text-lg"
+                className="block text-[#9d6c40] mb-2 text-xs font-bold sm:text-sm md:text-base lg:text-lg"
               >
                 First Name
               </label>
               <input
                 id="firstName"
                 type="text"
+                // ref={(el) => (inputRefs.current[0] = el)}
                 {...register("firstName", {
                   required: "First Name is required",
                 })}
                 className={`border rounded-lg p-2 sm:p-2 md:p-2
-              text-sm sm:text-base md:text-lg
+              text-sm sm:text-base md:text-lg bg-yellow-50
               w-full sm:w-full md:w-full lg:w-full
-              ${errors.firstName ? "border-red-500" : "border-stone-200"}
+              ${errors.firstName ? "border-red-500" : "border-[#9d6c40]"}
               focus:ring-2 focus:ring-opacity-50
               ${
                 errors.firstName ? "focus:ring-red-500" : "focus:ring-green-500"
@@ -121,20 +135,21 @@ function ContactUs() {
             <div className="flex flex-col w-72 sm:w-80 md:w-[23rem] lg:w-80 pb-4 sm:pb-0">
               <label
                 htmlFor="lastName"
-                className="block text-xs sm:text-sm md:text-base lg:text-lg"
+                className="block text-[#9d6c40] mb-2 text-xs sm:text-sm font-bold md:text-base lg:text-lg"
               >
                 Last Name
               </label>
               <input
                 id="lastName"
                 type="text"
+                // ref={(el) => (inputRefs.current[1] = el)}
                 {...register("lastName", {
                   required: "Last Name is required",
                 })}
-                className={`border rounded-lg p-2 sm:p-2 md:p-2
+                className={`border bg-yellow-50 rounded-lg p-2 sm:p-2 md:p-2
               text-sm sm:text-base md:text-lg
               w-full sm:w-full md:w-full lg:w-full ${
-                errors.lastName ? "border-red-500" : "border-stone-200"
+                errors.lastName ? "border-red-500" : "border-[#9d6c40]"
               } focus:ring-2 focus:ring-opacity-50 ${
                   errors.lastName
                     ? "focus:ring-red-500"
@@ -154,13 +169,14 @@ function ContactUs() {
             <div className="flex flex-col w-72 sm:w-80 md:w-[23rem] lg:w-80 pb-4 sm:pb-0">
               <label
                 htmlFor="email"
-                className=" text-xs sm:text-sm md:text-base lg:text-lg"
+                className="text-[#9d6c40] mb-2 text-xs font-bold sm:text-sm md:text-base lg:text-lg"
               >
                 Email
               </label>
               <input
                 id="email"
                 type="email"
+                // ref={(el) => (inputRefs.current[2] = el)}
                 {...register("email", {
                   required: "Email is required",
                   pattern: {
@@ -169,9 +185,9 @@ function ContactUs() {
                   },
                 })}
                 className={`border rounded-lg p-2 sm:p-2 md:p-2
-              text-sm sm:text-base md:text-lg
+              text-sm sm:text-base bg-yellow-50 md:text-lg
               w-full sm:w-full md:w-full lg:w-full  ${
-                errors.email ? "border-red-500" : "border-stone-200"
+                errors.email ? "border-red-500" : "border-[#9d6c40]"
               } focus:ring-2 focus:ring-opacity-50 ${
                   errors.email ? "focus:ring-red-500" : "focus:ring-green-500"
                 }placeholder-gray-400
@@ -189,13 +205,14 @@ function ContactUs() {
             <div className="w-72 flex flex-col sm:w-80 md:w-[23rem] lg:w-80 pb-4 sm:pb-0">
               <label
                 htmlFor="phone"
-                className=" text-xs sm:text-sm md:text-base border lg:text-lg"
+                className="text-[#9d6c40] mb-2 text-xs font-bold sm:text-sm md:text-base lg:text-lg"
               >
                 Phone Number
               </label>
               <input
                 id="phone"
                 type="tel"
+                // ref={(el) => (inputRefs.current[3] = el)}
                 {...register("phone", {
                   required: "Phone number is required",
                   pattern: {
@@ -203,10 +220,10 @@ function ContactUs() {
                     message: "Enter a valid 11-digit phone number",
                   },
                 })}
-                className={`border rounded-lg p-2 sm:p-2 md:p-2
+                className={`border bg-yellow-50 rounded-lg p-2 sm:p-2 md:p-2
               text-sm sm:text-base md:text-lg
               w-full sm:w-full md:w-full lg:w-full ${
-                errors.phone ? "border-red-500" : "border-stone-200"
+                errors.phone ? "border-red-500" : "border-[#9d6c40]"
               } focus:ring-2 focus:ring-opacity-50 ${
                   errors.phone ? "focus:ring-red-500" : "focus:ring-green-500"
                 } placeholder-gray-400
@@ -224,18 +241,19 @@ function ContactUs() {
             <div className=" col-span-2 row-span-2">
               <label
                 htmlFor="message"
-                className="block text-xs sm:text-sm md:text-base lg:text-lg"
+                className="block text-[#9d6c40] mb-2 text-xs font-bold sm:text-sm md:text-base lg:text-lg"
               >
                 Message
               </label>
               <textarea
                 id="message"
+                // ref={(el) => (inputRefs.current[4] = el)}
                 rows="4"
                 {...register("message", { required: "Message is required" })}
-                className={`border rounded-lg p-2 sm:p-2 md:p-3
+                className={`border bg-yellow-50 rounded-lg p-2 sm:p-2 md:p-3
               text-sm sm:text-base md:text-lg
               w-full sm:w-full md:w-full lg:w-full ${
-                errors.message ? "border-red-500" : "border-stone-200"
+                errors.message ? "border-red-500" : "border-[#9d6c40]"
               } focus:ring-2 focus:ring-opacity-50 ${
                   errors.message ? "focus:ring-red-500" : "focus:ring-green-500"
                 } placeholder-gray-400
@@ -257,9 +275,9 @@ function ContactUs() {
 
               <Button
                 type="submit"
-                bg="black"
-                color="white"
-                _hover={{ bg: "gray.800" }}
+                bg="#9d6c40"
+                color="#fefce8"
+                _hover={{ bg: "#b37c4d" }}
                 variant="solid"
                 size="md"
                 disabled={isSubmitting}

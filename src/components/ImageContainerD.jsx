@@ -21,7 +21,7 @@ function ImageContainerD() {
           className="rounded-[2rem] md:rounded-[5rem]"
         />
       </div>
-      <div className="rounded-xl w-[11rem] md:w-[22rem]">
+      <div className="rounded-xl w-[11rem] md:w-[22rem] lg:hidden xl:block">
         <img
           src={eventManagementB}
           alt="image2"
