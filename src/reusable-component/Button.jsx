@@ -41,7 +41,9 @@ function Button({ children, disabled, type, onSubmit }) {
     "inline-block text-lg rounded-lg bg-gradient-to-r from-[#A46A38] to-[#EFDB6A] font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed";
 
   const styles = {
-    primary_gold: baseGold + " px-8 py-4 md:px-5 md:py-3",
+    primary_gold:
+      baseGold +
+      " px-8 py-4 md:px-5 md:py-3 hover:scale-110 hover:bg-opacity-50 transition ease-out duration-300",
     primary_black: baseBlack + " text-lg px-8 py-4 md:px-10 md:py-5",
     // primary_white: baseWhite + " px-8 py-4 md:px-5 md:py-3 lg:px-[3rem]",
     primary_white: baseWhite + " px-8 py-4 md:px-5 md:py-3",
