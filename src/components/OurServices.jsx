@@ -26,13 +26,13 @@ function OurServices() {
   return (
     <section
       id="services"
-      className="mt-20 lg:mt-10 transition-opacity duration-1000 opacity-0 lg:pt-[5rem] "
+      className="pt-5 lg:mt-10 transition-opacity duration-1000 opacity-0 lg:pt-[5rem] "
     >
       <h2 className="text-center mt-[10rem] text-2xl font-bold lg:text-3xl xl:text-4xl">
         Our Services
       </h2>
 
-      <article className="grid content-center justify-items-center grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 sm:mx-12 md:mx-20 lg:mx-40 xl:mx-0 2xl:mx-40">
+      <article className="grid content-center justify-items-center grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 sm:mx-12 md:mx-20 lg:mx-40 xl:mx-20 2xl:mx-40">
         <ServicesA />
         <ServicesB />
         <ServicesC />
@@ -58,6 +58,7 @@ function OurServices() {
         <DescriptionD />
         <ImageContainerD />
       </article>
+
       {/* <ServicesInformation>
         <h1>Details</h1>
         <ImageContainer />

@@ -75,7 +75,7 @@ function Nav() {
   }, [nav]);
 
   return (
-    <nav className="fixed top-0 w-full z-50 flex shadow-lg items-center justify-between py-4  mx-auto bg-slate-50 px-4 sm:px-10 lg:px-[10rem]">
+    <nav className="fixed top-0 w-full z-50 flex shadow-lg items-center justify-between py-4  mx-auto bg-stone-200 px-4 sm:px-10 lg:px-[10rem]">
       <div>
         <a href="#home">
           <img src={navLogo} alt="logo" className="w-15 md:w-32 lg:38" />
@@ -114,7 +114,7 @@ function Nav() {
         ref={navRef}
         className={
           nav
-            ? "fixed z-10 left-0 top-0 w-[60%] border-r border-r-gray-900 h-full bg-stone-900 text-stone-200 ease-in-out duration-300"
+            ? "fixed z-10 left-0 top-0 w-[60%] border-r border-r-stone-500 h-full bg-stone-900 text-stone-200 ease-in-out duration-300"
             : "fixed left-[-100%]"
         }
       >
