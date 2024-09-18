@@ -61,7 +61,7 @@ function OurServices() {
         duration: 1,
         // ease: "power3.out",
         ease: "back(4)",
-        stagger: 0.2, // Stagger each service by 0.2 seconds
+        stagger: 0.2,
       });
     });
 
