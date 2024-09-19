@@ -206,3 +206,17 @@ li:hover::before {
 
 /* font-weight: 400;
   font-style: normal; */
+
+/* .form {
+  background-image: url("../public/lusiboi-background.jpg");
+  background-size: cover;
+  background-position: center;
+} */
+/* 
+.form {
+  background-image: url("../public/lusiboi-svg-removebg-preview.png");
+  position: absolute;
+  right: 150px;
+  top: 100px;
+  z-index: 1;
+} */

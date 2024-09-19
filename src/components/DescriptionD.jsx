@@ -16,7 +16,7 @@ function DescriptionD() {
       <h3 className="rainbow text-center lg:px-20 text-xl md:px-[1.5rem] 2xl:px-0 font-bold lg:text-4xl xl:px-10">
         Event Management
       </h3>
-      <p className="text-stone-200 lg:text-clamp px-[3rem] md:px-[1.5rem] text-center md:text-left lg:px-20 xl:px-10 2xl:px-0 lg:text-xl">
+      <p className="text-[#f9fada] lg:text-clamp px-[3rem] md:px-[1.5rem] text-center md:text-left lg:px-20 xl:px-10 2xl:px-0 lg:text-xl">
         We organize concerts, talent hunts, film premieres, and other events to
         showcase our talent and productions. Our events provide a platform for
         artists to connect with fans and industry professionals.

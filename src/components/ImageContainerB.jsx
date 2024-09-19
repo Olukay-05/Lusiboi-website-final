@@ -18,7 +18,7 @@ function ImageContainerB() {
         <img
           src={musicProductionB}
           alt="image"
-          className="rounded-[2rem] md:rounded-[5rem]"
+          className="rounded-[2rem] md:rounded-[5rem] lg:hidden xl:block"
         />
       </div>
       <div className="rounded-xl w-[11rem] md:w-[22rem]">

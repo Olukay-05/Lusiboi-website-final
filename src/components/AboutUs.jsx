@@ -118,7 +118,8 @@ function AboutUs() {
 
   return (
     <section id="about" className="bg-custom-gradient z-20">
-      <section className=" flex items-center gap-5 flex-col lg:block transition-opacity duration-3000 opacity-0 ease-in-out">
+      {/* transition-opacity duration-3000 opacity-0 ease-in-out */}
+      <section className=" flex items-center gap-5 flex-col lg:block">
         <div
           ref={imgRefOne}
           style={{
@@ -135,7 +136,7 @@ function AboutUs() {
           </span>
         </h1> */}
 
-        <h1 className="tracking-[0.3rem] text-4xl text-center text-zinc-300 sm:text-5xl sm:tracking-[0.5rem] md:text-6xl md:tracking-[0.6rem] lg:text-[10rem] lg:tracking-[2.5rem] xl:text-[12rem] xl:tracking-[4rem] sm:mt-18 lg:mt-32 lg:pt-[4rem]">
+        <h1 className="tracking-[0.3rem] text-4xl text-center text-[#f9fada] sm:text-5xl sm:tracking-[0.5rem] md:text-6xl md:tracking-[0.6rem] lg:text-[10rem] lg:tracking-[2.5rem] xl:text-[12rem] xl:tracking-[4rem] sm:mt-18 lg:mt-32 lg:pt-[4rem]">
           <div ref={h1Ref}>LUSIBOI</div>
           <span
             ref={spanRef}
@@ -149,8 +150,9 @@ function AboutUs() {
         </h1>
       </section>
 
-      <section className="transition-opacity duration-3000 opacity-0 ease-in-out">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between p-10 lg:mt-32 2xl:mx-64">
+      {/* transition-opacity duration-3000 opacity-0 ease-in-out */}
+      <section>
+        <div className=" flex flex-col-reverse md:flex-row items-center justify-between p-10 lg:mt-32 2xl:mx-72">
           <div className="lg:flex lg:h-80 lg:w-[80rem] ">
             {/* <div className="hidden lg:block">
               <img src={blackImg} alt="image-2" />
@@ -173,7 +175,7 @@ function AboutUs() {
             style={{
               clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
             }}
-            className="text-center opacity-0 transform translate-y-[100px] lg:text-left p-4 text-stone-200 lg:text-clamp lg:pl-24 2xl:pl-40 lg:text-xl "
+            className=" text-center text-[#f9fada] opacity-0 transform translate-y-[100px] lg:text-left p-4 lg:text-clamp lg:leading-loose lg:text-xl "
           >
             <p>
               Lusiboi Entertainment is a dynamic and innovative company

@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import navLogo from "../assets/navLogo.svg";
 import logo from "../assets/lusiboi-lg.png";
 
+import { gsap } from "gsap";
+
 const closeBtn = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +13,7 @@ const closeBtn = (
     strokeWidth={1.5}
     stroke="currentColor"
     className="size-6"
+    id="closeBtn"
   >
     <path
       strokeLinecap="round"
@@ -41,11 +44,36 @@ function Nav() {
   const [nav, setNav] = useState(false);
   const navRef = useRef();
   const closeBtnRef = useRef();
+  const btnSvgRef = useRef();
 
   function handleToggle() {
-    event.stopPropagation();
+    // event.stopPropagation();
     setNav(!nav);
   }
+
+  useEffect(() => {
+    if (nav) {
+      // Animation for opening the navbar
+      gsap.to(navRef.current, {
+        x: 0,
+        duration: 0.8,
+        ease: "power3.inOut",
+      });
+
+      gsap.fromTo(
+        btnSvgRef.current,
+        { rotation: 0, opacity: 0 },
+        { rotation: -180, opacity: 1, duration: 1, ease: "power3.inOut" }
+      );
+    } else {
+      // Animation for closing the navbar
+      gsap.to(navRef.current, {
+        x: "-100%",
+        duration: 0.8,
+        ease: "power3.inOut",
+      });
+    }
+  }, [nav]);
 
   // Close the navbar if clicked outside of it
   useEffect(() => {
@@ -75,14 +103,14 @@ function Nav() {
   }, [nav]);
 
   return (
-    <nav className="fixed top-0 w-full z-50 flex shadow-lg items-center justify-between py-4  mx-auto bg-stone-200 px-4 sm:px-10 lg:px-[10rem]">
+    <nav className="fixed top-0 w-full z-50 font-semibold flex shadow-lg items-center justify-between py-4  mx-auto bg-[#efdb6a] px-4 sm:px-10 lg:px-[10rem]">
       <div>
         <a href="#home">
-          <img src={navLogo} alt="logo" className="w-15 md:w-32 lg:38" />
+          <img src={navLogo} alt="logo" className="w-15 md:w-32 lg:w-36" />
         </a>
       </div>
       <div>
-        <ul className="md:flex items-center justify-between gap-16 hidden">
+        <ul className="md:flex items-center text-[#a86a33] justify-between gap-16 hidden xl:text-lg">
           <li className=" border-stone-600">
             <a href="#home" className="cursor-pointer">
               Home
@@ -107,18 +135,16 @@ function Nav() {
       </div>
 
       <div ref={closeBtnRef} className="block md:hidden" onClick={handleToggle}>
-        {nav ? closeBtn : openBtn}
+        {/* {nav ? closeBtn : openBtn} */}
+        {nav ? <div ref={btnSvgRef}>{closeBtn}</div> : openBtn}
       </div>
 
       <div
         ref={navRef}
-        className={
-          nav
-            ? "fixed z-10 left-0 top-0 w-[60%] border-r border-r-stone-500 h-full bg-stone-900 text-stone-200 ease-in-out duration-300"
-            : "fixed left-[-100%]"
-        }
+        className="fixed z-10 left-0 top-0 w-[60%] border-r border-r-stone-500 h-full bg-stone-900 text-stone-200"
+        style={{ transform: "translateX(-100%)" }} // Initial hidden state with GSAP
       >
-        <ul className="pt-24 uppercase p-4">
+        <ul className="pt-24 uppercase p-4 text-[#f9fad4]">
           <li className="p-4 border-b border-stone-600">
             <a href="#home" className="cursor-pointer" onClick={handleToggle}>
               Home
