@@ -117,7 +117,10 @@ function AboutUs() {
   }, []);
 
   return (
-    <section id="about" className="bg-custom-gradient z-20">
+    <section
+      id="about"
+      className="bg-custom-gradient z-20 w-full max-w-[1280px] mx-auto"
+    >
       {/* transition-opacity duration-3000 opacity-0 ease-in-out */}
       <section className=" flex items-center gap-5 flex-col lg:block">
         <div
@@ -152,30 +155,31 @@ function AboutUs() {
 
       {/* transition-opacity duration-3000 opacity-0 ease-in-out */}
       <section>
-        <div className=" flex flex-col-reverse md:flex-row items-center justify-between p-10 lg:mt-32 2xl:mx-72">
-          <div className="lg:flex lg:h-80 lg:w-[80rem] ">
-            {/* <div className="hidden lg:block">
-              <img src={blackImg} alt="image-2" />
-            </div>
-            <div className="md:mt-16 hidden lg:block">
-              <img src={whiteImg} alt="image-1" />
-            </div> */}
-            <div
-              ref={imgRefTwo}
-              style={{
-                clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
-              }}
-              className="hidden lg:block lg:w-52 opacity-0 transform translate-y-[100px]"
-            >
-              <img src={luciboi} alt="Logo" />
-            </div>
+        <div
+          // className=" flex flex-col-reverse md:flex-row items-center justify-between p-10 lg:mt-32 2xl:mx-72 border border-white"
+
+          className=" grid grid-cols-4 mt-20 lg:mt-40 xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[596px] mx-auto lg:gap-[18rem]"
+        >
+          {/* <div className=" lg:h-80 lg:w-[80rem]  ">
+
+          </div> */}
+
+          <div
+            ref={imgRefTwo}
+            style={{
+              clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+            }}
+            className=" hidden lg:w-[15rem] opacity-0 transform translate-y-[100px] lg:block justify-self-start"
+          >
+            <img src={luciboi} alt="Logo" />
           </div>
+
           <div
             ref={pRef}
             style={{
               clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
             }}
-            className=" text-center text-[#f9fada] opacity-0 transform translate-y-[100px] lg:text-left p-4 lg:text-clamp lg:leading-loose lg:text-xl "
+            className=" text-center text-[#f9fada] opacity-0 transform translate-y-[100px] lg:text-left lg:text-clamp lg:leading-loose lg:text-xl  flex items-center col-span-4 px-[3rem] lg:px-0 lg:col-span-3"
           >
             <p>
               Lusiboi Entertainment is a dynamic and innovative company

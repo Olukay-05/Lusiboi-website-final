@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         "libre-baskerville": ["Libre Baskerville", "serif"],
       },
+      screens: {
+        "3xl-custom": "1280px", // Custom breakpoint for 1300px
+      },
     },
   },
 
