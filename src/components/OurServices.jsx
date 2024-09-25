@@ -101,7 +101,7 @@ function OurServices() {
 
       <article
         id="movie-production"
-        className=" mt-40 lg:mt-[14rem] grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[596px]  mx-auto "
+        className=" mt-40 lg:mt-[14rem] grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[696px]  mx-auto "
       >
         <ImageContainerA />
         <DescriptionA />
@@ -109,7 +109,7 @@ function OurServices() {
 
       <article
         id="music-production"
-        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[596px] mx-auto"
+        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[696px] mx-auto"
       >
         <DescriptionB />
         <ImageContainerB />
@@ -117,7 +117,7 @@ function OurServices() {
 
       <article
         id="artist-management"
-        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[596px] mx-auto"
+        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[696px] mx-auto"
       >
         <ImageContainerC />
         <DescriptionC />
@@ -125,7 +125,7 @@ function OurServices() {
 
       <article
         id="event-management"
-        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[596px] mx-auto pb-20"
+        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[696px] mx-auto pb-20"
       >
         <DescriptionD />
         <ImageContainerD />

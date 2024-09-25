@@ -119,7 +119,7 @@ function Hero() {
 
         <div
           ref={filmRef}
-          className="opacity-0 absolute z-1 bottom-[-1.3rem] w-[9rem] md:w-[12rem] left-0 sm:bottom-[-1.3rem] md:bottom-[-1.5rem] md:left-[0rem] lg:bottom-[-2rem] lg:left-[0rem] xl:hidden lg:w-[18rem]"
+          className="opacity-1 absolute z-1 bottom-[-1.3rem] w-[9rem] md:w-[12rem] left-0 sm:bottom-[-1.3rem] md:bottom-[-1.5rem] md:left-[0rem] lg:bottom-[-2rem] lg:left-[0rem] xl:hidden lg:w-[18rem]"
         >
           <img src={film} alt="film" className="w-full" />
         </div>

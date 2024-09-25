@@ -61,7 +61,7 @@ function DescriptionB() {
       // }`}
 
       // flex items-center md:items-start py-20 md:py-0 lg:py-40 xl:py-10 flex-col gap-5
-      className={`fade-in text-stone-200 order-2 md:order-none flex flex-col gap-5 lg:gap-8 items-center md:items-start lg:justify-center px-6 md:px-0  ${
+      className={`fade-in text-stone-200 order-2 md:order-none flex flex-col gap-5 lg:gap-8 items-center md:items-start md:justify-center lg:justify-center px-6 md:px-0  ${
         isIntersecting ? "appear" : ""
       }`}
     >

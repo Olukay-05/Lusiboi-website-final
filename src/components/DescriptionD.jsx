@@ -9,7 +9,7 @@ function DescriptionD() {
   return (
     <article
       ref={ref}
-      className={`fade-in text-stone-200   flex flex-col gap-5 lg:gap-8 items-center md:items-start lg:justify-center px-6 order-2 md:order-none md:px-0  ${
+      className={`fade-in text-stone-200   flex flex-col gap-5 lg:gap-8 items-center md:items-start md:justify-center lg:justify-center px-6 order-2 md:order-none md:px-0  ${
         isIntersecting ? "appear" : ""
       }`}
     >

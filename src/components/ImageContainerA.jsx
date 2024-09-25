@@ -14,14 +14,14 @@ function ImageContainerA() {
           <img
             src={movieProductionB}
             alt="image2"
-            className="lg:block max-w-[12rem] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem] rounded-[5rem]"
+            className="lg:block max-w-[12rem] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem] rounded-[3rem] lg:rounded-[5rem]"
           />
         </div>
         <div className="absolute">
           <img
             src={movieProductionA}
             alt="image"
-            className="lg:block max-w-[12rem] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem] rounded-[5rem]"
+            className="lg:block max-w-[12rem] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem] rounded-[3rem] lg:rounded-[5rem]"
           />
         </div>
       </div>
