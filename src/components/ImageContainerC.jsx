@@ -8,25 +8,22 @@ function ImageContainerC() {
     // rootMargin: "0px 0px -350px 0px",
   });
   return (
-    <article
-      ref={ref}
-      className={`fade-in relative w-[15rem] h-[15rem] sm:w-0 sm:h-0 sm:mt-[28rem] mx-auto sm:mx-0 flex md:items-end md:justify-end xl:justify-center md:w-[68rem] text-stone-200 ${
-        isIntersecting ? "appear" : ""
-      }`}
-    >
-      <div className="absolute z-1 w-[11rem] md:w-[22rem] bottom-[1px] right-[1px] lg:bottom-[100px] lg:right-[105px] xl:right-[180px] ">
-        <img
-          src={artistManagementB}
-          alt="image"
-          className="rounded-[2rem] md:rounded-[5rem] lg:hidden xl:block"
-        />
-      </div>
-      <div className="rounded-xl w-[11rem] md:w-[22rem] ">
-        <img
-          src={artistManagementA}
-          alt="image2"
-          className="rounded-[2rem] md:rounded-[5rem]"
-        />
+    <article className="justify-self-center md:place-self-start">
+      <div className="relative rounded-xl w-[15rem] h-[15rem] sm:w-[16.5rem] sm:h-64 md:w-[18rem] md:h-72 lg:w-[22rem] lg:h-[22rem] xl:w-[26rem] xl:h-[26rem] md:rounded-none">
+        <div className="absolute bottom-0 right-0 z-10">
+          <img
+            src={artistManagementB}
+            alt="image2"
+            className="lg:block max-w-[12rem] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem] rounded-3xl"
+          />
+        </div>
+        <div className="absolute">
+          <img
+            src={artistManagementA}
+            alt="image"
+            className="lg:block max-w-[12rem] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem] rounded-3xl"
+          />
+        </div>
       </div>
     </article>
   );

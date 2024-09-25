@@ -68,20 +68,20 @@ function Hero() {
   }, []);
 
   return (
-    <>
+    <section className="bg-yellow-50 relative">
       {/* bg-yellow-50 */}
       {/* bg-[#1c1917] */}
       <section
         id="home"
-        className=" relative bg-yellow-50  text-center sm:relative text-stone-800  pt-40 sm:pt-20 pb-20  md:pt-40 md:pb-12 sm:flex sm:items-center sm:justify-around xl:px-0 2xl:px-20 lg:pt-[10rem] lg:pb-[12rem] border border-white lg:gap-[10rem]"
+        className="w-full max-w-[1280px] mx-auto relative text-center sm:relative text-stone-800  pt-40 sm:pt-32 pb-20  md:pt-36 md:pb-12 sm:flex sm:items-center sm:justify-around xl:px-0 lg:pt-[10rem] lg:pb-[14rem] border border-white lg:gap-[10rem]"
       >
-        <div className="border border-white flex items-start justify-between  p-4 flex-col lg:text-center gap-6 lg:gap-10 pb-8 md:px-20 md:text-center xl:gap-12  ">
+        <div className=" flex items-start justify-between p-4 flex-col sm:items-center md:items-center lg:text-center lg:items-center xl:items-start gap-6 lg:gap-10 pb-8 md:px-20 lg:px-0 md:text-center xl:gap-12  ">
           <h1
             ref={h1Ref}
             style={{
               clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
             }}
-            className="border text-[#a86a33] border-white opacity-0 transform translate-y-[100px] font-libre-baskerville xl:text-left font-normal text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.8rem] xl:max-w-2xl "
+            className=" text-[#a86a33]  opacity-0 transform translate-y-[100px] font-libre-baskerville lg:text-center xl:text-left font-normal text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-[5.8rem] xl:max-w-2xl "
           >
             Your Story, Our Expertise
           </h1>
@@ -112,14 +112,14 @@ function Hero() {
 
         <div
           ref={logoRef}
-          className="border border-white opacity-0 w-[45rem] xl:w-[50rem]  pl-20 xl:pl-0 xl:pr-20 hidden xl:block"
+          className=" opacity-0 w-[45rem] xl:w-[50rem]  pl-20 xl:pl-0  hidden xl:block"
         >
           <img src={luciboi} alt="image" className=" w-full" />
         </div>
 
         <div
           ref={filmRef}
-          className="opacity-0 absolute z-1 bottom--1 w-[12rem] left-0 sm:bottom-[-1.3rem] md:bottom-[-1.5rem] md:left-[0rem] lg:bottom-[-4rem] lg:left-[0rem] xl:bottom-[-2.5rem] lg:w-[18rem] xl:w-[20rem]"
+          className="opacity-0 absolute z-1 bottom-[-1.3rem] w-[9rem] md:w-[12rem] left-0 sm:bottom-[-1.3rem] md:bottom-[-1.5rem] md:left-[0rem] lg:bottom-[-2rem] lg:left-[0rem] xl:hidden lg:w-[18rem]"
         >
           <img src={film} alt="film" className="w-full" />
         </div>
@@ -127,7 +127,13 @@ function Hero() {
           <ParticlesComponent />
         </div> */}
       </section>
-    </>
+      <div
+        ref={filmRef}
+        className="opacity-0 absolute z-1 hidden xl:block xl:left-0 xl:bottom-[-2.5rem] xl:w-[20rem]"
+      >
+        <img src={film} alt="film" className="w-full" />
+      </div>
+    </section>
   );
 }
 

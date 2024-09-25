@@ -103,7 +103,13 @@ function Nav() {
   }, [nav]);
 
   return (
-    <nav className="fixed top-0 w-full z-50 font-semibold flex shadow-lg items-center justify-between py-4  mx-auto bg-[#efdb6a] px-4 sm:px-10 lg:px-[10rem]">
+    <nav
+      // className="fixed top-0 w-full mx-auto z-50 font-semibold flex shadow-lg items-center justify-between py-4 bg-[#efdb6a] px-4 sm:px-10 lg:px-[5rem] xl:px-[10rem]"
+
+      // w-full max-w-[1440px] mx-auto
+
+      className="fixed top-0 w-full mx-auto px-4 lg:px-28 z-50 font-semibold flex shadow-lg items-center justify-between py-4 bg-[#efdb6a] "
+    >
       <div>
         <a href="#home">
           <img src={navLogo} alt="logo" className="w-15 md:w-32 lg:w-36" />
