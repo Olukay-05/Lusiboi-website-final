@@ -60,7 +60,9 @@ function Button({ children, disabled, type, onSubmit }) {
 
   useEffect(() => {
     const updateButtonType = () => {
-      if (window.innerWidth > 768) {
+      // 768
+      //425
+      if (window.innerWidth > 815) {
         setResponsiveType(type); // Use the passed-in type (e.g., primary_black) for larger screens
       } else {
         // For small screens, adjust the type if it's one of the primary types
