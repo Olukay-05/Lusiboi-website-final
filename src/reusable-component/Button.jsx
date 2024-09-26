@@ -29,7 +29,7 @@ import { useEffect, useState } from "react";
 
 function Button({ children, disabled, type, onSubmit }) {
   const baseGold =
-    "inline-block text-lg rounded-lg bg-gradient-to-r from-[#A46A38] to-[#EFDB6A] font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed";
+    "inline-block text-[#9d6c40] text-lg rounded-lg bg-gradient-to-r from-[#A46A38] to-[#EFDB6A] font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed";
 
   const baseBlack =
     "inline-block rounded-lg bg-[#a86a33] shadow-xl font-semibold uppercase tracking-wide text-[#f9fada] transition-colors duration-300 hover:bg-[#945e2e] hover:text-[#f4f5d6] focus:bg-[#945e2e] focus:text-[#a86a33] focus:outline-none focus:ring focus:ring-gray-800 focus:ring-offset-2  disabled:cursor-not-allowed";
