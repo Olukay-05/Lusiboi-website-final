@@ -108,7 +108,7 @@ function Nav() {
 
       // w-full max-w-[1440px] mx-auto
 
-      className="fixed top-0 w-full mx-auto px-4 lg:px-28 z-50 font-semibold flex shadow-lg items-center justify-between py-4 bg-[#efdb6a] "
+      className="fixed top-0 w-full mx-auto px-4 lg:px-28 z-50 font-semibold flex shadow-sm items-center justify-between py-4 bg-[#efdb6a] "
     >
       <div>
         <a href="#home">

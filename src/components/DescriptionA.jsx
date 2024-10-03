@@ -15,7 +15,7 @@ function DescriptionA() {
 
       // fade-in
 
-      className=" text-stone-200  flex flex-col gap-5 lg:gap-7 items-center md:items-start md:justify-center px-6 md:px-0 xl:pr-0 lg:justify-center"
+      className="text-stone-200  flex flex-col gap-5 lg:gap-7 items-center md:items-start md:justify-center px-6 md:px-0 xl:pr-0 lg:justify-center"
     >
       <h3 className="rainbow text-center md:text-left  text-xl 2xl:px-0 font-bold lg:text-4xl">
         Movie Production
