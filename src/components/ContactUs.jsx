@@ -4,16 +4,16 @@ import { useState, useEffect, useRef } from "react";
 // import Button from "../reusable-component/Button";
 import { Button, useToast } from "@chakra-ui/react"; // Chakra UI toast for notifications
 
-import billboard from "../assets/billboard.svg";
+import billboard from "../assets/contact-us-image.svg";
 // import ParticlesComponent from "./ParticlesComponent";
-import useIntersectionObserver from "../Hooks/useIntersectionObserver";
+// import useIntersectionObserver from "../Hooks/useIntersectionObserver";
 // import useArrowKeyNavigation from "../Hooks/useArrowKeyNavigation";
 
 function ContactUs() {
-  const [ref, isIntersecting] = useIntersectionObserver({
-    threshold: 0,
-    rootMargin: "0px 0px -250px 0px",
-  });
+  // const [ref, isIntersecting] = useIntersectionObserver({
+  //   threshold: 0,
+  //   rootMargin: "0px 0px -250px 0px",
+  // });
 
   const {
     register,
@@ -83,17 +83,21 @@ function ContactUs() {
           </div>
           <div className="flex items-center justify-center pb-[15rem]">
             <div
-              className={`hidden xl:block shadow-xl ${
+              className={`hidden xl:block shadow-xl rounded-l-lg  ${
                 Object.keys(errors).length > 0 ? "w-[28.2rem]" : "w-[25.2rem]"
               }`}
             >
-              <img src={billboard} alt="image" className="w-full" />
+              <img
+                src={billboard}
+                alt="image"
+                className="w-full rounded-l-lg "
+              />
             </div>
             <form
               onSubmit={handleSubmit(sendEmail)}
               // bg-stone-200
               // bg-[#faeeae]
-              className="block shadow-xl border border-t-2 border-yellow-100 bg-yellow-50 sm:grid rounded-lg grid-cols-2 items-center gap-4 p-4 py-12 md:p-8 sm:px-8  md:px-8 mx-0 sm:mx-4 md:mx-8 lg:mx-0 xl:mx-0 lg:px-[4rem] lg:py-[3rem] "
+              className="block shadow-xl border border-t-2 border-yellow-100 bg-yellow-50 sm:grid rounded-lg lg:rounded-r-lg grid-cols-2 items-center gap-4 p-4 py-12 md:p-8 sm:px-8  md:px-8 mx-0 sm:mx-4 md:mx-8 lg:mx-0 xl:mx-0 lg:px-[4rem] lg:py-[3rem] "
             >
               {/* First Name */}
               <div className="flex flex-col w-72 sm:w-80 md:w-[23rem] lg:w-80 pb-4 sm:pb-0">

@@ -29,7 +29,7 @@ import { useEffect, useState } from "react";
 
 function Button({ children, disabled, type, onSubmit }) {
   const baseGold =
-    "inline-block text-[#9d6c40] text-lg rounded-lg bg-gradient-to-r from-[#A46A38] to-[#EFDB6A] font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 hover:bg-yellow-300 focus:bg-yellow-300 focus:outline-none focus:ring focus:ring-yellow-300 focus:ring-offset-2 disabled:cursor-not-allowed";
+    "inline-block text-[#9d6c40] text-lg rounded-lg bg-gradient-to-r from-[#A46A38] to-[#EFDB6A] font-semibold uppercase tracking-wide text-stone-800 transition-colors duration-300 disabled:cursor-not-allowed  hover:from-[#8C582E] hover:to-[#E4C855] focus:ring-4 focus:ring-[#EFDB6A] focus:outline-none";
 
   const baseBlack =
     "inline-block rounded-lg bg-[#a86a33] shadow-xl font-semibold uppercase tracking-wide text-[#f9fada] transition-colors duration-300 hover:bg-[#945e2e] hover:text-[#f4f5d6] focus:bg-[#945e2e] focus:text-[#a86a33] focus:outline-none focus:ring focus:ring-gray-800 focus:ring-offset-2  disabled:cursor-not-allowed";
@@ -43,7 +43,7 @@ function Button({ children, disabled, type, onSubmit }) {
   const styles = {
     primary_gold:
       baseGold +
-      " px-8 py-4 md:px-5 md:py-3 hover:scale-110 hover:bg-opacity-50 transition ease-out duration-300",
+      " px-8 py-4 md:px-5 md:py-3  hover:bg-opacity-50 transition ease-out duration-300",
     primary_black: baseBlack + " text-lg px-8 py-4 md:px-10 md:py-5",
     // primary_white: baseWhite + " px-8 py-4 md:px-5 md:py-3 lg:px-[3rem]",
     // primary_white: baseWhite + " px-8 py-4 md:px-5 md:py-3",

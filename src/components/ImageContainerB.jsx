@@ -1,12 +1,13 @@
 import musicProductionA from "../assets/musicProductionA.svg";
 import musicProductionB from "../assets/musicProductionB.svg";
-import useIntersectionObserver from "../Hooks/useIntersectionObserver";
+// import useIntersectionObserver from "../Hooks/useIntersectionObserver";
 
 function ImageContainerB() {
-  const [ref, isIntersecting] = useIntersectionObserver({
-    threshold: 0,
-    // rootMargin: "0px 0px -350px 0px",
-  });
+  // const [ref, isIntersecting] = useIntersectionObserver({
+  //   threshold: 0,
+  //   // rootMargin: "0px 0px -350px 0px",
+  // });
+
   return (
     <article className="grid md:place-self-end justify-self-center order-1 md:order-none">
       <div className="relative rounded-xl w-[15rem] h-[15rem] sm:w-[16.5rem] sm:h-64 md:w-[18rem] md:h-72 lg:w-[22rem] lg:h-[22rem] xl:w-[26rem] xl:h-[26rem] md:rounded-none">

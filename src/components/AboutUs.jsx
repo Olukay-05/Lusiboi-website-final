@@ -182,13 +182,20 @@ function AboutUs() {
             className=" text-center text-[#f9fada] opacity-0 transform translate-y-[100px] lg:text-left lg:text-clamp lg:leading-loose lg:text-xl  flex items-center col-span-4 px-[3rem] lg:px-0 lg:col-span-3"
           >
             <p>
-              Lusiboi Entertainment is a dynamic and innovative company
+              {/* Lusiboi Entertainment is a dynamic and innovative company
               specializing in movie production and music across all genres. We
               are dedicated to discovering and promoting talent, producing
               high-quality content, and delivering top-notch entertainment
               experiences. Our enthusiasm towards creativity and excellence
               drives us to persistently push the boundaries of what is possible
-              in the entertainment industry.
+              in the entertainment industry. */}
+              Nigerian entertainment powerhouse Lusiboi, is committed to
+              narrating authentic African stories and nurturing emerging talent.
+              We believe in the transformative power of entertainment and are
+              committed to creating content that resonates globally. We aim to
+              foster a thriving African entertainment ecosystem by producing
+              high-quality films, supporting creators, and bringing the best of
+              African culture to the world.
             </p>
           </div>
         </div>
