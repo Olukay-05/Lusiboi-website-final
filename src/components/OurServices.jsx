@@ -77,7 +77,7 @@ function OurServices() {
       >
         Our Services
       </h2>
-      <article className="grid content-center justify-items-center grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 w-full max-w-[1280px] mx-auto">
+      <article className="grid content-center justify-items-center grid-cols-2 gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 w-full max-w-[1120px] mx-auto">
         <div ref={(el) => (servicesRef.current[0] = el)}>
           <ServicesA />
         </div>
@@ -101,7 +101,7 @@ function OurServices() {
 
       <article
         id="movie-production"
-        className=" mt-40 lg:mt-[14rem] grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[696px]  mx-auto "
+        className=" mt-40 lg:mt-[14rem] grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1120px] lg:max-w-[896px] md:max-w-[696px]  mx-auto "
       >
         <ImageContainerA />
         <DescriptionA />
@@ -109,7 +109,7 @@ function OurServices() {
 
       <article
         id="music-production"
-        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[696px] mx-auto"
+        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1120px] lg:max-w-[896px] md:max-w-[696px] mx-auto"
       >
         <DescriptionB />
         <ImageContainerB />
@@ -117,7 +117,7 @@ function OurServices() {
 
       <article
         id="artist-management"
-        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[696px] mx-auto"
+        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1120px] lg:max-w-[896px] md:max-w-[696px] mx-auto"
       >
         <ImageContainerC />
         <DescriptionC />
@@ -125,7 +125,7 @@ function OurServices() {
 
       <article
         id="event-management"
-        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1280px] lg:max-w-[896px] md:max-w-[696px] mx-auto pb-20"
+        className=" mt-40 grid grid-cols-1 gap-14 md:gap-0  md:grid-cols-2 w-full xl:max-w-[1120px] lg:max-w-[896px] md:max-w-[696px] mx-auto pb-20"
       >
         <DescriptionD />
         <ImageContainerD />

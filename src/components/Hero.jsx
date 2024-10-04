@@ -78,7 +78,7 @@ function Hero() {
 
         // max-w-[1280px]
 
-        className="w-full max-w-[1350px] mx-auto relative text-center sm:relative text-stone-800  pt-40 sm:pt-32 pb-20  md:pt-36 md:pb-12 sm:grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 xl:px-0 "
+        className="w-full max-w-[1350px] mx-auto lg:mx-auto xl:mx-[5rem] relative text-center sm:relative text-stone-800  pt-40 sm:pt-32 pb-20  md:pt-36 md:pb-12 sm:grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 xl:px-0 "
       >
         <div className=" flex items-start justify-between p-4 flex-col sm:items-center md:items-center lg:text-center lg:items-center xl:items-start gap-6 lg:gap-10 pb-8 md:px-20 lg:px-0 md:text-center xl:gap-12">
           <h1
@@ -122,7 +122,7 @@ function Hero() {
 
         <div
           ref={logoRef}
-          className=" opacity-0 w-[100%]  pl-20 xl:pl-0  hidden xl:block justify-self-center self-center"
+          className=" opacity-0 w-[100%]  pl-20 xl:pl-0  hidden xl:block justify-self-center self-center xl:justify-start xl:self-start"
         >
           <img src={heroImage} alt="image" className=" w-full" />
         </div>
