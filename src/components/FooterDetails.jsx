@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 import Button from "../reusable-component/Button";
 // import instagram from "../assets/instagram.svg";
@@ -8,16 +9,27 @@ import Button from "../reusable-component/Button";
 import footerLogo from "../assets/footerLogo.svg";
 // import useIntersectionObserver from "../Hooks/useIntersectionObserver";
 
-import { BsFacebook } from "react-icons/bs";
-import { FiInstagram } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { SlSocialFacebook, SlSocialInstagram } from "react-icons/sl";
 import { BsTwitterX } from "react-icons/bs";
+
+import {
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+} from "@chakra-ui/react";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 const currentYear = new Date().getFullYear();
 
 function FooterDetails() {
   const [iconSize, setIconSize] = useState(20);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const modalRef = useRef(null);
 
   // Update icon size based on screen width
   useEffect(() => {
@@ -38,6 +50,26 @@ function FooterDetails() {
 
     return () => window.removeEventListener("resize", updateSize);
   }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      // GSAP animation when modal opens
+      gsap.fromTo(
+        modalRef.current,
+        { opacity: 0, y: -50 }, // Initial state (hidden)
+        { opacity: 1, y: 0, duration: 1, ease: "power3.out" } // Visible state
+      );
+    } else {
+      // Animate the modal closing
+      gsap.to(modalRef.current, {
+        opacity: 0,
+        y: -50,
+        duration: 1,
+        ease: "power3.in",
+        onComplete: () => onClose(), // Close after animation completes
+      });
+    }
+  }, [isOpen, onClose]);
 
   // const [ref, isIntersecting] = useIntersectionObserver({
   //   threshold: 0,
@@ -68,10 +100,15 @@ function FooterDetails() {
               <p className="text-nowrap transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
                 <a href="#services">Our Services</a>
               </p>
+              <p className="text-nowrap transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">
+                <a onClick={onOpen} className="cursor-pointer">
+                  Privacy Policy
+                </a>
+              </p>
             </div>
             <div
               // className="flex items-center justify-center gap-3 sm:gap-5"
-              className="grid grid-cols-4 place-items-center mx-[4rem] md:mx-[2rem] lg:mx-[18rem] xl:mx-[22rem]"
+              className="grid grid-cols-4 place-items-center mx-[4rem] md:mx-[2rem] lg:mx-[18rem] xl:mx-[25rem]"
             >
               <div className=" transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300 cursor-pointer">
                 <a href="https://www.instagram.com/lusiboi_ent_?igsh=emNzaDJsOHM0M2I4">
@@ -113,19 +150,51 @@ function FooterDetails() {
               </div>
             </div>
           </div>
-          <div className="hidden lg:block sm:pb-10 w-[14rem] text-nowrap">
-            <Button type="primary_gold">
+          {/* <Button type="primary_gold">
               <a href="#contact">Contact Us</a>
-            </Button>
-          </div>
+            </Button> */}
+          <div className="hidden lg:block mb-2 whitespace-nowrap"></div>
         </div>
         {/* <div className="w-[12rem] bg-orange-200 md:w-[26rem] lg:w-[28rem] xl:w-[50rem] 2xl:w-[87.5rem] grid grid-cols-1 text-center justify-center mx-auto text-xs sm:text-sm md:text-base lg:text-lg sm:mx-44 mt-4">
         <p className="text-center">c 2024 All Rights Reserved</p>
       </div> */}
-        <p className="px-[5rem] mt-2 lg:mt-4 text-center lg:ml-[-10rem] text-xs sm:text-sm md:text-base lg:text-lg">
+        <p className="flex items-center justify-center mt-2 lg:mt-4 text-xs sm:text-sm md:text-base lg:text-lg">
           © {currentYear} Lusiboi Entertainment. All rights reserved.
         </p>
       </div>
+
+      {/* Modal for Privacy Policy */}
+      <Modal onClose={onClose} isOpen={isOpen} scrollBehavior="inside">
+        <ModalOverlay />
+        <ModalContent
+          maxWidth={{
+            base: "90%", // Mobile screens
+            sm: "80%", // Small screens (tablet)
+            md: "60%", // Medium screens (laptop)
+            lg: "50%", // Large screens (desktop)
+          }}
+          bg="#fefce8"
+          color="#9d6c40"
+          ref={modalRef}
+        >
+          <ModalHeader bg="#efdb6a" borderTopRadius="lg">
+            Privacy Policy
+          </ModalHeader>
+          <ModalCloseButton />
+          <ModalBody
+            sx={{
+              /* Hides the scrollbar but keeps the scroll functionality */
+              "&::-webkit-scrollbar": {
+                display: "none",
+              },
+              "-ms-overflow-style": "none" /* IE and Edge */,
+              "scrollbar-width": "none" /* Firefox */,
+            }}
+          >
+            <PrivacyPolicy />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 }
