@@ -110,9 +110,9 @@ function Nav() {
 
       className="fixed top-0 w-full mx-auto px-4 lg:px-28 z-50 font-semibold flex shadow-sm items-center justify-between py-4 bg-[#efdb6a] "
     >
-      <div>
+      <div className="w-24 md:w-32 lg:w-36">
         <a href="#home">
-          <img src={navLogo} alt="logo" className="w-15 md:w-32 lg:w-36" />
+          <img src={navLogo} alt="logo" className="w-full" />
         </a>
       </div>
       <div>
