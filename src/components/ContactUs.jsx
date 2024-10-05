@@ -83,21 +83,21 @@ function ContactUs() {
           </div>
           <div className="flex items-center justify-center pb-[15rem]">
             <div
-              className={`hidden xl:block shadow-xl rounded-l-lg  ${
+              className={`hidden xl:block hover:shadow-xl rounded-l-lg border border-[#9d6c40] border-r-0 ${
                 Object.keys(errors).length > 0 ? "w-[28.2rem]" : "w-[25.2rem]"
               }`}
             >
               <img
                 src={billboard}
                 alt="image"
-                className="w-full rounded-l-lg "
+                className="w-full rounded-l-lg"
               />
             </div>
             <form
               onSubmit={handleSubmit(sendEmail)}
               // bg-stone-200
               // bg-[#faeeae]
-              className="block shadow-xl border border-t-2 border-yellow-100 bg-yellow-50 sm:grid rounded-lg lg:rounded-r-lg grid-cols-2 items-center gap-4 p-4 py-12 md:p-8 sm:px-8  md:px-8 mx-0 sm:mx-4 md:mx-8 lg:mx-0 xl:mx-0 lg:px-[4rem] lg:py-[3rem] "
+              className="block border border-[#9d6c40] lg:border-l-0  bg-yellow-50 sm:grid rounded-lg lg:rounded-r-lg lg:rounded-l-none grid-cols-2 items-center gap-4 p-4 py-12 md:p-8 sm:px-8  md:px-8 mx-0 sm:mx-4 md:mx-8 lg:mx-0 xl:mx-0 lg:px-[4rem] lg:py-[3rem] hover:shadow-md "
             >
               {/* First Name */}
               <div className="flex flex-col w-72 sm:w-80 md:w-[23rem] lg:w-80 pb-4 sm:pb-0">
@@ -285,6 +285,8 @@ function ContactUs() {
                   variant="solid"
                   size="md"
                   disabled={isSubmitting}
+                  width="100%"
+                  mt={{ base: "10px", md: "0" }}
                 >
                   {isSubmitting ? "Sending..." : "Submit"}
                 </Button>
