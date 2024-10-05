@@ -12,18 +12,18 @@ function ImageContainerC() {
   return (
     <article className="justify-self-center md:place-self-start">
       <div className="relative rounded-xl w-[15rem] h-[15rem] sm:w-[16.5rem] sm:h-64 md:w-[18rem] md:h-72 lg:w-[22rem] lg:h-[22rem] xl:w-[26rem] xl:h-[26rem] md:rounded-none">
-        <div className="absolute bottom-0 right-0 z-10 outline outline-2 outline-yellow-200 rounded-[3rem] lg:rounded-[5rem]">
+        <div className="absolute bottom-0 right-0 z-10 border-[3px] border-spacing-0 border-yellow-200 rounded-[3rem] lg:rounded-[6rem] max-w-[12rem] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem]">
           <img
             src={artistManagementB}
             alt="image2"
-            className="lg:block max-w-[12rem] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem] rounded-3xl"
+            className="lg:block w-[100%]  rounded-[3rem] lg:rounded-[6rem]"
           />
         </div>
-        <div className="absolute outline outline-2 outline-yellow-200 rounded-[3rem] lg:rounded-[5rem]">
+        <div className="absolute border-[3px] border-spacing-0 border-yellow-200 rounded-[3rem] lg:rounded-[6rem]">
           <img
             src={movieProductionA}
             alt="image"
-            className="lg:block max-w-[12rem] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem] rounded-[3rem] lg:rounded-[5rem]"
+            className="lg:block max-w-[12rem] w-[100%] sm:max-w-48 md:max-w-56 lg:max-w-72 xl:max-w-[22rem] rounded-[3rem] lg:rounded-[6rem]"
           />
         </div>
       </div>

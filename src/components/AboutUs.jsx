@@ -38,7 +38,7 @@ function AboutUs() {
         y: 0,
         stagger: 0.2, // Stagger animation
         duration: 1,
-        ease: "power4.out",
+        ease: "back",
         scrollTrigger: {
           trigger: h1Element,
           start: "top 80%", // When the top of the element hits 80% of the viewport height
@@ -59,10 +59,10 @@ function AboutUs() {
 
   useEffect(() => {
     const tl = gsap.timeline({
-      defaults: { ease: "power4.inOut", duration: 2 },
+      defaults: { ease: "back", duration: 2 },
       scrollTrigger: {
         trigger: h1Ref.current, // Trigger animation when h1Ref enters viewport
-        start: "top 80%", // Start the animation when the top of the element is 80% from the top of the viewport
+        start: "top 30%", // Start the animation when the top of the element is 80% from the top of the viewport
         end: "bottom 20%", // End the animation when the bottom of the element is 20% from the top of the viewport
         toggleActions: "play none none none", // Play animation on enter, no actions on leave
         scrub: false, // Set to true if you want the animation to sync with the scroll position
