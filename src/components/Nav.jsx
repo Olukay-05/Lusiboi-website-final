@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import navLogo from "../assets/navLogo.svg";
+import navLogo from "../assets/lusiboi-logo.svg";
 import logo from "../assets/lusiboi-lg.png";
 
 import { gsap } from "gsap";
