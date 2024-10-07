@@ -1,21 +1,17 @@
 import Button from "../reusable-component/Button";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
 
 function DescriptionA() {
+  const [articleRef, isVisible] = useAnimateOnScroll(0.2);
+
   return (
     <article
-      // className={`fade-in text-stone-200  flex items-center md:items-start py-20 md:py-0 lg:py-40 xl:py-10 flex-col gap-5 ${
-      //   isIntersecting ? "appear" : ""
-      // }`}
-
-      // flex items-center md:items-start py-20 md:py-0 lg:py-40 xl:py-10 flex-col gap-5
-
-      // className={`fade-in text-stone-200 border border-white flex flex-col gap-5 lg:gap-7 items-center md:items-start px-6 md:px-0 md:pr-8 xl:pr-0 lg:justify-center ${
-      //   isIntersecting ? "appear" : ""
-      // }`}
-
-      // fade-in
-
-      className="text-stone-200  flex flex-col gap-5 lg:gap-7 items-center md:items-start md:justify-center px-6 md:px-0 xl:pr-0 lg:justify-center"
+      ref={articleRef}
+      className={`text-stone-200 opacity-0 flex flex-col gap-5 lg:gap-7 items-center md:items-start md:justify-center px-6 md:px-0 xl:pr-0 lg:justify-center ${
+        isVisible
+          ? "animate__animated animate__fadeIn animate__delay-1s opacity-5"
+          : ""
+      }`}
     >
       <h3 className="rainbow text-center md:text-left  text-xl 2xl:px-0 font-bold lg:text-4xl">
         Movie Production

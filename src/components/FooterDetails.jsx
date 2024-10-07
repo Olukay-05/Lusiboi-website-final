@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { Fade, ScaleFade, Slide, SlideFade, Collapse } from "@chakra-ui/react";
 
-import Button from "../reusable-component/Button";
+// import Button from "../reusable-component/Button";
 // import instagram from "../assets/instagram.svg";
 // import email from "../assets/email.svg";
 // import tiktok from "../assets/tiktok.svg";
@@ -29,7 +29,6 @@ const currentYear = new Date().getFullYear();
 function FooterDetails() {
   const [iconSize, setIconSize] = useState(20);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const modalRef = useRef(null);
 
   // Update icon size based on screen width
   useEffect(() => {
@@ -51,39 +50,8 @@ function FooterDetails() {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
-  useEffect(() => {
-    if (isOpen) {
-      // GSAP animation when modal opens
-      gsap.fromTo(
-        modalRef.current,
-        { opacity: 0, y: -50 }, // Initial state (hidden)
-        { opacity: 1, y: 0, duration: 1, ease: "power3.out" } // Visible state
-      );
-    } else {
-      // Animate the modal closing
-      gsap.to(modalRef.current, {
-        opacity: 0,
-        y: -50,
-        duration: 1,
-        ease: "power3.in",
-        onComplete: () => onClose(), // Close after animation completes
-      });
-    }
-  }, [isOpen, onClose]);
-
-  // const [ref, isIntersecting] = useIntersectionObserver({
-  //   threshold: 0,
-  //   rootMargin: "0px 0px -250px 0px",
-  // });
   return (
-    <div
-      // ref={ref}
-      // className={` fade-in bg-stone-900 text-[#f9fada] pb-16 lg:pb-24 ${
-      //   isIntersecting ? "appear" : ""
-      // }`}
-
-      className="fade-in bg-stone-900 text-[#f9fada] pb-16 lg:pb-24"
-    >
+    <div className=" bg-stone-900 text-[#f9fada] pb-16 lg:pb-24">
       <div className=" w-full max-w-[1440px] mx-auto">
         <div className="border-b border-b-[#f9fada] h-40 sm:h-64 mx-[2rem] lg:mx-[2.2rem] xl:mx-[12.5rem] flex items-end justify-between text-xs sm:text-sm md:text-base lg:text-lg">
           <div className="w-[14rem] h-[8rem] mx-auto lg:w-[50rem] xl:w-[84rem] sm:h-[14rem] grid grid-cols-1 text-center justify-center">
@@ -117,8 +85,6 @@ function FooterDetails() {
                   <SlSocialInstagram size={iconSize} />
                 </a>
               </div>
-
-              {/* w-4 h-4 sm:w-8 sm:h-8 */}
 
               <div className=" transform sm:mb-0 hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300 cursor-pointer">
                 {/* <img src={tiktok} alt="tiktok" className="w-full" /> */}
@@ -155,17 +121,20 @@ function FooterDetails() {
             </Button> */}
           <div className="hidden lg:block mb-2 whitespace-nowrap"></div>
         </div>
-        {/* <div className="w-[12rem] bg-orange-200 md:w-[26rem] lg:w-[28rem] xl:w-[50rem] 2xl:w-[87.5rem] grid grid-cols-1 text-center justify-center mx-auto text-xs sm:text-sm md:text-base lg:text-lg sm:mx-44 mt-4">
-        <p className="text-center">c 2024 All Rights Reserved</p>
-      </div> */}
         <p className="flex items-center justify-center mt-2 lg:mt-4 text-xs sm:text-sm md:text-base lg:text-lg">
           © {currentYear} Lusiboi Entertainment. All rights reserved.
         </p>
       </div>
 
       {/* Modal for Privacy Policy */}
-      <Modal onClose={onClose} isOpen={isOpen} scrollBehavior="inside">
+      <Modal
+        onClose={onClose}
+        isOpen={isOpen}
+        motionPreset="slideInBottom"
+        scrollBehavior="inside"
+      >
         <ModalOverlay />
+
         <ModalContent
           maxWidth={{
             base: "90%", // Mobile screens
@@ -175,7 +144,6 @@ function FooterDetails() {
           }}
           bg="#fefce8"
           color="#9d6c40"
-          ref={modalRef}
         >
           <ModalHeader bg="#efdb6a" borderTopRadius="lg">
             Privacy Policy
