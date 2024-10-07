@@ -1,19 +1,14 @@
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 // import Button from "../reusable-component/Button";
 import { Button, useToast } from "@chakra-ui/react"; // Chakra UI toast for notifications
 
 import billboard from "../assets/contact-us-image.svg";
-// import ParticlesComponent from "./ParticlesComponent";
-// import useIntersectionObserver from "../Hooks/useIntersectionObserver";
-// import useArrowKeyNavigation from "../Hooks/useArrowKeyNavigation";
+import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
 
 function ContactUs() {
-  // const [ref, isIntersecting] = useIntersectionObserver({
-  //   threshold: 0,
-  //   rootMargin: "0px 0px -250px 0px",
-  // });
+  const [articleRef, isVisible] = useAnimateOnScroll(0.2);
 
   const {
     register,
@@ -66,10 +61,6 @@ function ContactUs() {
     <>
       <section
         id="contact"
-        // bg-[#1c1917]
-        // className={` relative z-0 fade-in mt-20 pt-10  bg-yellow-50 border-b-2  text-slate-800  ${
-        //   isIntersecting ? "appear" : ""
-        // }`}
         className="  relative z-0 mt-20 pt-10  bg-yellow-50 border-b-2  text-slate-800 "
       >
         <div className="w-full max-w-[1440px] mx-auto">
@@ -81,9 +72,16 @@ function ContactUs() {
               Any question or remarks? Just write us a message
             </p>
           </div>
-          <div className="flex items-center justify-center pb-[15rem]">
+          <div
+            ref={articleRef}
+            className={`flex opacity-0 items-center justify-center pb-[15rem] ${
+              isVisible
+                ? "animate__animated animate__fadeIn animate__delay-1s opacity-5"
+                : ""
+            }`}
+          >
             <div
-              className={`hidden xl:block hover:shadow-xl rounded-l-lg border border-[#9d6c40] border-r-0 ${
+              className={`hidden xl:block hover:shadow-md rounded-l-lg border border-[#9d6c40] border-r-0 ${
                 Object.keys(errors).length > 0 ? "w-[28.2rem]" : "w-[25.2rem]"
               }`}
             >
