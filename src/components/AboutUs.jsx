@@ -62,7 +62,7 @@ function AboutUs() {
       defaults: { ease: "back", duration: 2 },
       scrollTrigger: {
         trigger: h1Ref.current, // Trigger animation when h1Ref enters viewport
-        start: "top 30%", // Start the animation when the top of the element is 80% from the top of the viewport
+        start: "top 80%", // Start the animation when the top of the element is 80% from the top of the viewport
         end: "bottom 20%", // End the animation when the bottom of the element is 20% from the top of the viewport
         toggleActions: "play none none none", // Play animation on enter, no actions on leave
         scrub: false, // Set to true if you want the animation to sync with the scroll position

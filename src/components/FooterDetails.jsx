@@ -130,7 +130,7 @@ function FooterDetails() {
       <Modal
         onClose={onClose}
         isOpen={isOpen}
-        motionPreset="slideInBottom"
+        motionPreset="scale"
         scrollBehavior="inside"
       >
         <ModalOverlay />
