@@ -76,7 +76,7 @@ function Hero() {
             style={{
               clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
             }}
-            className=" text-[#a86a33] border opacity-0 transform translate-y-[100px] font-libre-baskerville lg:text-center xl:text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl md:max-w-4xl leading-tight md:leading-tight lg:leading-tight font-semibold xl:max-w-[38rem]"
+            className=" text-[#a86a33] border border-opacity-0 dark:border-[#a79381] dark:border-opacity-0 opacity-0 transform translate-y-[100px] font-libre-baskerville lg:text-center xl:text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl md:max-w-4xl leading-tight md:leading-tight lg:leading-tight font-semibold xl:max-w-[38rem]"
           >
             Shaping the Future of African Entertainment
           </h1>
