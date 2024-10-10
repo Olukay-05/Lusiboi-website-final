@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 
-// import luciboi from "../assets/lusiboi-lg.png";
 import heroImage from "../assets/hero-group-images.png";
 
 import film from "../assets/film.svg";
@@ -8,8 +7,6 @@ import film from "../assets/film.svg";
 import { gsap } from "gsap";
 
 import Button from "../reusable-component/Button";
-// import Particles from "@tsparticles/react";
-// import ParticlesComponent from "./ParticlesComponent";
 
 function Hero() {
   const h1Ref = useRef(null);
@@ -20,8 +17,6 @@ function Hero() {
 
   useEffect(() => {
     let tl = gsap.timeline({ defaults: { ease: "back", duration: 2 } });
-
-    // power4.inOut
 
     // Animate h1
     tl.to(h1Ref.current, {
@@ -71,13 +66,8 @@ function Hero() {
 
   return (
     <section className="bg-yellow-50 relative h-[100%] flex items-center justify-center">
-      {/* 2xl:h-auto */}
       <section
         id="home"
-        // className="w-full max-w-[1280px] border border-black mx-auto relative text-center sm:relative text-stone-800  pt-40 sm:pt-32 pb-20  md:pt-36 md:pb-12 sm:flex sm:items-center sm:justify-around xl:px-0 lg:pt-[10rem] lg:pb-[14rem] lg:gap-[10rem]"
-
-        // max-w-[1280px]
-
         className="w-full max-w-[1350px] mx-auto lg:mx-auto xl:mx-[5rem] relative text-center sm:relative text-stone-800  pt-40 sm:pt-32 pb-20  md:pt-36 md:pb-12 sm:grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 xl:px-0 "
       >
         <div className=" flex items-start justify-between p-4 flex-col sm:items-center md:items-center lg:text-center lg:items-center xl:items-start gap-6 lg:gap-10 pb-8 md:px-20 lg:px-0 md:text-center xl:gap-12">
@@ -86,10 +76,8 @@ function Hero() {
             style={{
               clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
             }}
-            className=" text-[#a86a33] border border-yellow-50 opacity-0 transform translate-y-[100px] font-libre-baskerville lg:text-center xl:text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl md:max-w-4xl leading-tight md:leading-tight lg:leading-tight font-semibold xl:max-w-[38rem]"
+            className=" text-[#a86a33] border opacity-0 transform translate-y-[100px] font-libre-baskerville lg:text-center xl:text-left text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl md:max-w-4xl leading-tight md:leading-tight lg:leading-tight font-semibold xl:max-w-[38rem]"
           >
-            {/* xl:text-[5.8rem] xl:max-w-2xl */}
-            {/* Your Story, Our Expertise */}
             Shaping the Future of African Entertainment
           </h1>
           <p
@@ -99,10 +87,6 @@ function Hero() {
             }}
             className=" text-[#a86a33] opacity-0 lg:leading-relaxed transform translate-y-[100px]  hind-regular text-base lg:text-center sm:text-lg md:text-xl xl:text-left leading-tight md:max-w-4xl xl:max-w-2xl"
           >
-            {/* Your ultimate destination for all things entertainment. From
-            groundbreaking films to unforgettable events, Lusiboi Entertainment
-            is your partner in turning creativity into impact. Let&apos;s make
-            something unforgettable together. */}
             We&apos;re more than just entertainment. We&apos;re a community
             dedicated to amplifying African voices and shaping the future with
             film production, talent management, and event organization.

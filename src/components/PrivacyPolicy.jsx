@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
         <h2 className="text-2xl font-semibold mb-4">Consent</h2>
         <p className="mb-4">
           By using our website (or by ticking the consent box below) you agree
-          to the terms of this Privacy Policy, as to allow us to utilise your
+          to the terms of this Privacy Policy, as to allow us to utilize your
           data to service you more effectively.
         </p>
         <p className="mb-4">
@@ -80,8 +80,16 @@ const PrivacyPolicy = () => {
         </h2>
         <p className="mb-4">
           Please note that this Privacy Policy applies to the main web pages of
-          Lusiboi Entertainment (i.e. those in www.lusiboientertainment.com )
-          and generally to the business of business operations of Lusiboi
+          Lusiboi Entertainment (i.e. those in{" "}
+          <a
+            href="https://www.lusiboientertainment.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#007BFF", textDecoration: "underline" }}
+          >
+            www.lusiboientertainment.com
+          </a>{" "}
+          ) and generally to the business of business operations of Lusiboi
           Entertainment. If you follow a link to any other website, please check
           to confirm their policies before you submit any personal information
           to those websites.
@@ -276,7 +284,7 @@ const PrivacyPolicy = () => {
           audience to improve our offerings. Your responses to such inquiries
           will be voluntary and used solely for evaluation purposes.
           Additionally, aggregated demographic and statistical information about
-          user behaviour may be collected and used to analyse the popularity and
+          user behaviour may be collected and used to analyze the popularity and
           effectiveness of our content. This information will not identify
           individual users.
         </p>
@@ -364,7 +372,7 @@ const PrivacyPolicy = () => {
           <li style={{ marginBottom: "10px" }}>
             <strong>
               Right to be informed about how personal data is used:
-            </strong>
+            </strong>{" "}
             You have the right to be informed about how we will use and share
             your personal data. This explanation will be provided in a concise,
             transparent, intelligible, and accessible format, written in clear
@@ -422,7 +430,7 @@ const PrivacyPolicy = () => {
               Right to object to processing of personal data in certain
               circumstances, including where personal data is used for marketing
               purposes:
-            </strong>
+            </strong>{" "}
             You have the right to object to our processing of your personal data
             in certain circumstances. This includes if we are processing data
             for (a) performing a task in the public interest, (b) direct

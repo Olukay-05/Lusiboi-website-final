@@ -1,9 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// import whiteImg from "../assets/maskWhite.svg";
-// import blackImg from "../assets/maskBlack.svg";
 import luciboi from "../assets/lusiboi-lg.png";
 
 // Register the ScrollTrigger plugin
@@ -121,7 +118,6 @@ function AboutUs() {
       id="about"
       className="bg-custom-gradient z-20 w-full max-w-[1280px] mx-auto "
     >
-      {/* transition-opacity duration-3000 opacity-0 ease-in-out */}
       <section className=" flex items-center gap-5 flex-col lg:block">
         <div
           ref={imgRefOne}
@@ -153,17 +149,8 @@ function AboutUs() {
         </h1>
       </section>
 
-      {/* transition-opacity duration-3000 opacity-0 ease-in-out */}
       <section>
-        <div
-          // className=" flex flex-col-reverse md:flex-row items-center justify-between p-10 lg:mt-32 2xl:mx-72 border border-white"
-
-          className=" grid grid-cols-4 mt-20 lg:mt-40 xl:max-w-[1120px] lg:max-w-[896px] md:max-w-[596px] mx-auto lg:gap-[18rem]"
-        >
-          {/* <div className=" lg:h-80 lg:w-[80rem]  ">
-
-          </div> */}
-
+        <div className=" grid grid-cols-4 mt-20 lg:mt-40 xl:max-w-[1120px] lg:max-w-[896px] md:max-w-[596px] mx-auto lg:gap-[18rem]">
           <div
             ref={imgRefTwo}
             style={{
@@ -182,13 +169,6 @@ function AboutUs() {
             className=" text-center text-[#f9fada] opacity-0 transform translate-y-[100px] lg:text-left lg:text-clamp lg:leading-loose lg:text-lg  flex items-center col-span-4 px-[3rem] lg:px-0 lg:col-span-3"
           >
             <p>
-              {/* Lusiboi Entertainment is a dynamic and innovative company
-              specializing in movie production and music across all genres. We
-              are dedicated to discovering and promoting talent, producing
-              high-quality content, and delivering top-notch entertainment
-              experiences. Our enthusiasm towards creativity and excellence
-              drives us to persistently push the boundaries of what is possible
-              in the entertainment industry. */}
               Nigerian entertainment powerhouse Lusiboi, is committed to
               narrating authentic African stories and nurturing emerging talent.
               We believe in the transformative power of entertainment and are

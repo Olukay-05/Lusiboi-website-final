@@ -1,13 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Fade, ScaleFade, Slide, SlideFade, Collapse } from "@chakra-ui/react";
 
-// import Button from "../reusable-component/Button";
-// import instagram from "../assets/instagram.svg";
-// import email from "../assets/email.svg";
-// import tiktok from "../assets/tiktok.svg";
-// import twitterX from "../assets/twitterX.svg";
 import footerLogo from "../assets/footerLogo.svg";
-// import useIntersectionObserver from "../Hooks/useIntersectionObserver";
 
 import { HiOutlineMail } from "react-icons/hi";
 import { SlSocialFacebook, SlSocialInstagram } from "react-icons/sl";
@@ -74,44 +68,26 @@ function FooterDetails() {
                 </a>
               </p>
             </div>
-            <div
-              // className="flex items-center justify-center gap-3 sm:gap-5"
-              className="grid grid-cols-4 place-items-center mx-[4rem] md:mx-[2rem] lg:mx-[18rem] xl:mx-[25rem]"
-            >
+            <div className="grid grid-cols-4 place-items-center mx-[4rem] md:mx-[2rem] lg:mx-[18rem] xl:mx-[25rem]">
               <div className=" transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300 cursor-pointer">
                 <a href="https://www.instagram.com/lusiboi_ent_?igsh=emNzaDJsOHM0M2I4">
-                  {/* <img src={instagram} alt="instagram" className="w-full" /> */}
-
                   <SlSocialInstagram size={iconSize} />
                 </a>
               </div>
 
               <div className=" transform sm:mb-0 hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300 cursor-pointer">
-                {/* <img src={tiktok} alt="tiktok" className="w-full" /> */}
                 <a href="https://www.facebook.com/people/Lusiboi-Entertainment/61565626529084/">
-                  <SlSocialFacebook
-                    size={iconSize}
-                    // className="w-[1rem] md:w-[1rem] lg:w-[1.2rem] xl:w-[2rem]"
-                  />
-                  {/* <BsFacebook size={iconSize} /> */}
+                  <SlSocialFacebook size={iconSize} />
                 </a>
               </div>
               <div className=" transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300 cursor-pointer">
-                {/* <img src={email} alt="email" className="w-full" /> */}
                 <a href="#contact">
-                  <HiOutlineMail
-                    size={iconSize}
-                    // className="w-[0.9rem] md:w-[1rem] lg:w-[1.2rem] xl:w-[2rem]"
-                  />
+                  <HiOutlineMail size={iconSize} />
                 </a>
               </div>
               <div className="transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300 cursor-pointer">
-                {/* <img src={twitterX} alt="twitterX" className="w-full" /> */}
                 <a href="https://x.com/lusiboi_ent_?s=11&t=bERW0yHoWlIBF1p36nm7Fw">
-                  <BsTwitterX
-                    size={iconSize}
-                    // className="w-[0.8rem] md:w-[1rem] lg:w-[1.2rem] xl:w-[2rem]"
-                  />
+                  <BsTwitterX size={iconSize} />
                 </a>
               </div>
             </div>

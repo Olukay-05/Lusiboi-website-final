@@ -1,15 +1,9 @@
 import artistManagementB from "../assets/artistManagementA.svg";
 import movieProductionA from "../assets/movie-production-a.svg";
 import useAnimateOnScroll from "../Hooks/useAnimateOnScroll";
-// import useIntersectionObserver from "../Hooks/useIntersectionObserver";
 
 function ImageContainerC() {
   const [articleRef, isVisible] = useAnimateOnScroll(0.2);
-
-  // const [ref, isIntersecting] = useIntersectionObserver({
-  //   threshold: 0,
-  //   // rootMargin: "0px 0px -350px 0px",
-  // });
 
   return (
     <article
