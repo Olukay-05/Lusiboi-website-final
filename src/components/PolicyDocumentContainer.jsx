@@ -3,7 +3,6 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
   useDisclosure,
@@ -18,17 +17,6 @@ function PolicyDocumentContainer() {
   const btnRef = React.useRef(null);
   return (
     <>
-      {/* <RadioGroup value={scrollBehavior} onChange={setScrollBehavior}>
-        <Stack direction="row">
-          <Radio value="inside">inside</Radio>
-          <Radio value="outside">outside</Radio>
-        </Stack>
-      </RadioGroup>
-
-      <Button mt={3} ref={btnRef} onClick={onOpen}>
-        Trigger modal
-      </Button> */}
-
       <Modal
         onClose={onClose}
         finalFocusRef={btnRef}

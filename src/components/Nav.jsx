@@ -47,13 +47,11 @@ function Nav() {
   const btnSvgRef = useRef();
 
   function handleToggle() {
-    // event.stopPropagation();
     setNav(!nav);
   }
 
   useEffect(() => {
     if (nav) {
-      // Animation for opening the navbar
       gsap.to(navRef.current, {
         x: 0,
         duration: 0.8,
@@ -103,13 +101,7 @@ function Nav() {
   }, [nav]);
 
   return (
-    <nav
-      // className="fixed top-0 w-full mx-auto z-50 font-semibold flex shadow-lg items-center justify-between py-4 bg-[#efdb6a] px-4 sm:px-10 lg:px-[5rem] xl:px-[10rem]"
-
-      // w-full max-w-[1440px] mx-auto
-
-      className="fixed top-0 w-full mx-auto px-4 lg:px-28 z-50 font-semibold flex shadow-sm items-center justify-between py-4 bg-[#efdb6a] "
-    >
+    <nav className="fixed top-0 w-full mx-auto px-4 lg:px-28 z-50 font-semibold flex shadow-sm items-center justify-between py-4 bg-[#efdb6a] ">
       <div className="w-24 md:w-32 lg:w-36">
         <a href="#home">
           <img src={navLogo} alt="logo" className="w-full" />
@@ -141,7 +133,6 @@ function Nav() {
       </div>
 
       <div ref={closeBtnRef} className="block md:hidden" onClick={handleToggle}>
-        {/* {nav ? closeBtn : openBtn} */}
         {nav ? <div ref={btnSvgRef}>{closeBtn}</div> : openBtn}
       </div>
 

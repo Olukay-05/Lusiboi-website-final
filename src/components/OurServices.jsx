@@ -1,8 +1,3 @@
-// import { default as Description } from "./Description";
-// import { default as ImageContainer } from "./ImageContainer";
-// import { default as Services } from "./Services";
-// import { default as ServicesInformation } from "./ServicesInformation";
-
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,7 +8,6 @@ import ServicesC from "./ServicesC";
 import ServicesD from "./ServicesD";
 import ServicesE from "./ServicesE";
 
-// import ServicesInformation from "./ServicesInformation";
 import ImageContainerA from "./ImageContainerA";
 import DescriptionA from "./DescriptionA";
 
