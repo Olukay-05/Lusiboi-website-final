@@ -15,12 +15,12 @@ function DescriptionB() {
       }`}
     >
       <h3 className="rainbow text-center md:text-left  text-xl 2xl:px-0 font-bold lg:text-4xl">
-        Movie Production
+        Music Production
       </h3>
       <p className="text-[#f9fada] lg:text-clamp text-center md:text-left text-base lg:text-lg">
-        From script development to post-production, we handle all aspects of
-        filmmaking. Our team of experienced professionals ensures that every
-        film we produce is of the highest quality.
+        We produce and promote music across all genres, providing opportunities
+        for artists to reach new heights. Our state-of-the-art recording studios
+        and industry connections help artists create and distribute their music.
       </p>
       <div>
         <a href="#contact">
