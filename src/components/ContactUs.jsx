@@ -26,7 +26,7 @@ function ContactUs() {
     const formData = {
       from_name: fullName,
       user_email: data.email,
-      phone: data.phone,
+      user_phone: data.phone,
       message: data.message,
     };
 
